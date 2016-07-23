@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).ancestor(3)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'd=d2_=$(rmoma$74xs7kr2a10j)x2(u2n24bq#m674us&^8r=f'
 
-DJANGO_APPS [
+DJANGO_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
@@ -19,11 +19,11 @@ DJANGO_APPS [
         'django.contrib.staticfiles',
 ]
 
-THIRD_PARTY_APPS [
+THIRD_PARTY_APPS = [
 
 ]
 
-LOCAL_APPS [
+LOCAL_APPS = [
 
 ]
 
@@ -45,7 +45,7 @@ ROOT_URLCONF = 'SistemaDiscusiones.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR.child('templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,5 +91,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-TEMPLATE_DIRS = [BASE_DIR.child('templates')]
