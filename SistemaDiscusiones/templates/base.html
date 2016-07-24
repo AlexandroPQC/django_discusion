@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>{% block title %}{% endblock %}</title>
+        {% load static from staticfiles %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        {# <link rel="stylesheet" href="{% static 'css/style.css' %}"> #}
     </head>
     <body>
         <nav class="navbar navbar-default navbar-inverse navbar-customize" role="navigation">
