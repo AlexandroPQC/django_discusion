@@ -20,7 +20,7 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-
+        'social.apps.django_app.default',
 ]
 
 LOCAL_APPS = [
@@ -94,3 +94,10 @@ USE_L10N = True
 USE_TZ = True
 
 AUTH_USER_MODEL = 'users.User'
+
+AUTHENTICATION_BACKENDS = (
+    'social.backends.facebook.FacebookAppOAuth2',
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.twitter.TwitterOAuth',
+    'django.contrib.auth.backends.ModelBackend',
+)

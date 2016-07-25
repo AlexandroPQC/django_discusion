@@ -23,12 +23,12 @@
         <div class="col-md-4 login">
             <h3>Conectate con:</h3>
             <p>
-                <button type="button" class="btn btn-primary btn-lg btn-lg-customize-fb">
+                <a href="{% url 'social:begin' 'facebook' %}" type="button" class="btn btn-primary btn-lg btn-lg-customize-fb">
                     <span class="icon-facebook">Facebook</span>
-                </button>
-                <button type="button" class="btn btn-primary btn-lg btn-lg-customize-fb">
+                </a>
+                <a href="{% url 'social:begin' 'twitter' %}" type="button" class="btn btn-primary btn-lg btn-lg-customize-fb">
                     <span class="icon-twitter">Twitter</span>
-                </button>
+                </a>
             </p>
         </div>
     </div>
