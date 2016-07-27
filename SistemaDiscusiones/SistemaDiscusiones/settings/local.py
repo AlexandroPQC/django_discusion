@@ -20,3 +20,9 @@ DATABASES = {
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS =  [BASE_DIR.child('static')]
+
+SOCIAL_AUTH_FACEBOOK_KEY = '15xxxxxxxxxxxxxx'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'ffxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
+SOCIAL_AUTH_TWITTER_KEY = 'K4xxxxxxxxxxxxxxxxxxxxxx'
+SOCIAL_AUTH_TWITTER_SECRET = '7hexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'

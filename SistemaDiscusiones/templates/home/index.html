@@ -1,6 +1,30 @@
 {% extends 'base.html' %}
 
-{% block title %} Alejandro {% endblock %}
+{% block title %} DjangoAsk {% endblock %}
+
+{% block profile %}
+
+    {% if user.is_authenticated %}
+        <div class="nav navbar-nav navbar-right">
+            <div class="contenido-imagen-perfil">
+                <a href="#" class="padding-minus">
+                    <img src="{{STATIC_URL}}/img/alguien.jpg" class="foto-perfil" />
+                </a>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                {{ user.username }}
+                <a class="caret"></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Perfil</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Salir<span class="glyphicon glyphicon-log-out"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}
 
 {% block content %}
 <div class="container">
